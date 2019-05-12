@@ -23,7 +23,6 @@
     "require": {
 		"php": "^7.2",
 		"terabytesoft/alert": "^0.0.1@dev",
-		"terabytesoft/app-user": "^0.0.1@dev",
         "terabytesoft/font-awesome": "^0.0.1@dev",
         "yiisoft/rbac": "^3.0@dev",
         "yiisoft/view": "^3.0@dev",
