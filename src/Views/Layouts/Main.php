@@ -4,16 +4,19 @@
 /* @var $content string */
 
 use TerabyteSoft\Themes\Adminator\Assets\Adminator\AdminatorAsset;
+use TerabyteSoft\Themes\Adminator\Assets\Npm\ThemifyIconsAsset;
 
 use TerabyteSoft\Widgets\Alert;
 use Yiisoft\Yii\Bootstrap4\Html;
 use Yiisoft\Yii\Bootstrap4\Breadcrumbs;
 
 AdminatorAsset::register($this);
+ThemifyIconsAsset::register($this);
 
 ?>
 
 <!- BEGIN-PAGE -!>
+
 <?php $this->beginPage() ?>
 	<!DOCTYPE html>
 	<!- HTML -!>
@@ -88,4 +91,5 @@ AdminatorAsset::register($this);
 	<?= Html::endTag('html') ?>
 	<!- END - HTML -!>
 <?php $this->endPage() ?>
+
 <!- END - BEGIN-PAGE -!>

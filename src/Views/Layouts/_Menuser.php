@@ -15,14 +15,46 @@
 
 /* @var $this \yii\web\View */
 
-use cjtterabytesoft\widgets\Sidebar;
-use yii\bootstrap4\Nav;
-use yii\helpers\Html;
+use TerabyteSoft\Widgets\Sidebar;
+use Yiisoft\Yii\Bootstrap4\Html;
+use Yiisoft\Yii\Bootstrap4\Nav;
+use yii\helpers\Url;
+
+$imagesUrl = TerabyteSoft\Themes\Adminator\Assets\Images\ImagesAsset::register($this);
+$avatarUrl = $this->app->getAlias($imagesUrl->baseUrl) . '/Avatar/Profile/30/icon-avatar.png';
+$userName = $this->app->user->identity->username;
+
+$nav[] = [
+	'label' => Html::begintag('div', ['class' => 'peer mR-10']) .
+		Html::img(
+			$avatarUrl,
+			$options = [
+				'class' => 'w-2r bdrs-50p',
+			]
+		) .
+		Html::endTag('div') .
+		Html::begintag('div', ['class' => 'peer']) .
+			Html::tag(
+				'span',
+				$userName,
+				$options = [
+					'class' => 'fsz-sm c-grey-900',
+				]
+			) .
+		Html::endTag('div'),
+	'options' => ['class' => ''],
+	'url' => '\\#',
+	'linkOptions' => ['class' => 'no-after peers fxw-nw ai-c lh-1'],
+	'items' => $this->app->params['adminator.menu.menuser.nav.items'],
+];
 
 ?>
 
 <!- MENUSER !->
-<?= Html::beginTag('div', ['class' => 'header navbar ' . \Yii::$app->params['dashboard_user_nav_css']]) ?>
+
+<?= Html::beginTag('div', [
+	'class' => 'header navbar ' . $this->app->params['adminator.menu.menuser.nav.css']
+]) ?>
 	<?= Html::beginTag('div', ['class' => 'header-container']) ?>
 		<?php
 			echo Sidebar::widget([
@@ -30,15 +62,16 @@ use yii\helpers\Html;
 				'labelTemplate' => '{label}',
 				'linkTemplate' => '<a href="{url}" {linkOptions}>{icon}</a>',
 				'options' => ['class' => 'nav-left'],
-				'items' => \Yii::$app->params['dashboard_toolbar_nav'],
+				'items' => $this->app->params['adminator.menu.menuser.toolbar.items'],
 			]);
 
 			echo Nav::widget([
 				'encodeLabels' => false,
 				'options' => ['class' => 'nav-right'],
-				'items' => \Yii::$app->params['dashboard_user_nav'],
+				'items' => $nav,
 			]);
 		?>
 	<?= Html::endTag('div') ?>
 <?= Html::endTag('div') ?>
+
 <!- END - MENUSER !->

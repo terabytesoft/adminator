@@ -15,11 +15,12 @@
 
 /* @var $this \yii\web\View */
 
-use yii\helpers\Html;
+use Yiisoft\Yii\Bootstrap4\Html;
 
 ?>
 
 <!- SIDEBAR - START -!>
+
 <?= Html::begintag('div', ['class' => 'sidebar']) ?>
 	<?= Html::begintag('div', ['class' => 'sidebar-inner']) ?>
 		<!- SIDEBAR-HEADER -!>
@@ -28,4 +29,5 @@ use yii\helpers\Html;
 		<?= $this->render('_sidebar-menu') ?>
 	<?= Html::endTag('div') ?>
 <?= Html::endTag('div') ?>
+
 <!- SIDEBAR - END -!>

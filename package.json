@@ -1,4 +1,5 @@
 {
+    "name": "adminator",
     "license": "BSD-3-Clause",
     "dependencies": {
         "@composer-asset/terabytesoft--font-awesome": "file:./vendor/foxy/composer-asset/terabytesoft/font-awesome",

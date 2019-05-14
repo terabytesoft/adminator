@@ -15,15 +15,16 @@
 
 /* @var $this \yii\web\View */
 
-use yii\helpers\Html;
+use Yiisoft\Yii\Bootstrap4\Html;
 
 ?>
 
 <!- SIDEBAR-HEADER -!>
+
 <?= Html::begintag('div', ['class' => 'sidebar-logo']) ?>
 	<?= Html::begintag('div', ['class' => 'peers ai-c fxw-nw']) ?>
 		<?= Html::begintag('div', ['class' => 'peer peer-greed']) ?>
-			<?= Html::begintag('a', ['class' => 'sidebar-link td-n', 'href' => \Yii::$app->homeUrl]) ?>
+			<?= Html::begintag('a', ['class' => 'sidebar-link td-n', 'href' => $this->app->homeUrl]) ?>
 				<?= Html::begintag('div', ['class' => 'peers ai-c fxw-nw']) ?>
 					<?= Html::begintag('div', ['class' => 'peer']) ?>
 						<?= Html::begintag('div', ['class' => 'logo']) ?>
@@ -32,7 +33,7 @@ use yii\helpers\Html;
 					<?= Html::endTag('div') ?>
 					<?= Html::begintag('div', ['class' => 'peer peer-greed']) ?>
 						<?= Html::begintag('h5', ['class' => 'lh-1 mB-0 logo-text']) ?>
-							<?= Html::encode(\Yii::t('adminator', 'Adminator')) ?>
+							<?= Html::encode($this->app->t('Adminator', 'Adminator')) ?>
 						<?= Html::endTag('h5') ?>
 					<?= Html::endTag('div') ?>
 				<?= Html::endTag('div') ?>
@@ -48,4 +49,5 @@ use yii\helpers\Html;
 		<?= Html::endTag('div') ?>
 	<?= Html::endTag('div') ?>
 <?= Html::endTag('div') ?>
+
 <!- END - SIDEBAR-HEADER -!>

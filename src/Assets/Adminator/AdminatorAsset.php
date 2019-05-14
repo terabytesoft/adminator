@@ -23,7 +23,8 @@ class AdminatorAsset extends AssetBundle
 
 	public $css = [
 		'Css/Adminator.css',
-		'Css/Site.css'
+		'Css/Security_Login_Adminator.css',
+		'Css/Site.css',
 	];
 
 	public $js = [
@@ -38,5 +39,15 @@ class AdminatorAsset extends AssetBundle
 		\Yiisoft\Yii\JQuery\YiiAsset::class,
 		\TerabyteSoft\Themes\Adminator\Assets\Bower\BootBoxAsset::class,
 		\TerabyteSoft\Assets\Fontawesome\Dev\Css\NpmAllAsset::class,
+	];
+
+	public $publishOptions = [
+		'only' => [
+			'Css/Adminator.css',
+			'Css/Security_Login_Adminator.css',
+			'Css/Site.css',
+			'Js/Lodash.Custom.min.js',
+			'Js/Adminator.js',
+		],
 	];
 }
