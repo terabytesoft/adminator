@@ -8,6 +8,6 @@ use yii\helpers\Yii;
 
 class ImagesAsset extends AssetBundle
 {
-	public $sourcePath = '@TerabyteSoft/Themes/Adminator/Assets/Images/';
+	public $sourcePath = __DIR__ ;
 	public $baseUrl    = '@web';
 }

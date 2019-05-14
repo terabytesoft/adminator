@@ -5,7 +5,7 @@ use Yiisoft\Yii\Bootstrap4\Html;
 
 return [
 // adminator - options
-	'adminator.autor.copyright' => 'CJTTERABYTE INC - ' . strftime('%Y') . '.',
+	'adminator.autor.copyright' => 'TerabyteSoft - ' . strftime('%Y') . '.',
 	'adminator.logo.yii' => 'https://farm2.staticflickr.com/1757/27875123737_f2ab0311e3_o.png',
 	'adminator.social.account.facebook' => '',
 	'adminator.social.account.linkedin' => '',
@@ -22,7 +22,7 @@ return [
 		],
 		[
 			'label' => Html::tag('i', '', ['class' => 'ion-android-person-add fa-lg']) . ' ' .
-			Yii::t('Adminator', 'Signup'), 'url' => ['/site/signup'],
+			Yii::t('Adminator', 'Signup'), 'url' => ['/user/registration/register'],
 		],
 		[
 			'label' => Html::tag('i', '', ['class' => 'fa fa-sign-in fa-lg']) . ' ' .
@@ -84,7 +84,7 @@ return [
 			'label' => Html::tag(
 				'span',
 				Html::encode(
-					Yii::t('Adminator', 'Dashboard')
+					Yii::t('Tests', 'Dashboard')
 				),
 				['class' => 'title']
 			),
@@ -97,9 +97,58 @@ return [
 				),
 				['class' => 'icon-holder']
 			),
-			'url' => ['/'],
-			'linkOptions' => ['class' => 'sidebar-link'],
-			'options' => ['class' => 'nav-item'],
+			'url' => 'javascript:void(0);',
+			'linkOptions' => ['class' => 'dropdown-toggle'],
+			'options' => ['class' => 'nav-item dropdown'],
+			'items' => [
+				[
+					'label' => Html::tag(
+						'span',
+						Html::encode(
+							Yii::t('Tests', 'Option 1')
+						),
+						['class' => 'title']
+					),
+					'url' => 'javascript:void(0);',
+					'linkOptions' => ['class' => 'sidebar-link'],
+					'options' => ['class' => 'nav-item dropdown'],
+					'items' => [
+						[
+							'label' => Html::tag(
+								'span',
+								Html::encode(
+									Yii::t('Tests', 'Option 2')
+								),
+								['class' => 'title']
+							),
+							'url' => '/site/about',
+							'linkOptions' => ['class' => 'sidebar-link'],
+							'options' => ['class' => 'nav-item dropdown'],
+						],
+					],
+				],
+			],
+		],
+		[
+			'label' => Html::tag(
+				'span',
+				Html::encode(
+					Yii::t('Tests', 'Manage Users')
+				),
+				['class' => 'title']
+			),
+			'icon' => Html::tag(
+				'span',
+				Html::tag(
+					'i',
+					'',
+					['class' => 'c-blue-500 ti-user']
+				),
+				['class' => 'icon-holder']
+			),
+			'url' => ['/user/admin/index'],
+			'linkOptions' => ['class' => 'dropdown-toggle'],
+			'options' => ['class' => 'nav-item dropdown'],
 		],
 	],
 ];

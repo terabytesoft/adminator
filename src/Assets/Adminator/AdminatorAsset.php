@@ -19,11 +19,12 @@ use yii\web\AssetBundle;
 
 class AdminatorAsset extends AssetBundle
 {
-	public $sourcePath = '@TerabyteSoft/Themes/Adminator/Assets/Adminator/';
+	public $sourcePath = __DIR__ ;
 
 	public $css = [
 		'Css/Adminator.css',
-		'Css/Security_Login_Adminator.css',
+		'Css/Login.css',
+		'Css/Register.css',
 		'Css/Site.css',
 	];
 
@@ -44,7 +45,8 @@ class AdminatorAsset extends AssetBundle
 	public $publishOptions = [
 		'only' => [
 			'Css/Adminator.css',
-			'Css/Security_Login_Adminator.css',
+			'Css/Login.css',
+			'Css/Register.css',
 			'Css/Site.css',
 			'Js/Lodash.Custom.min.js',
 			'Js/Adminator.js',
