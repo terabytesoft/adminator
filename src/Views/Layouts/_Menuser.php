@@ -15,7 +15,7 @@
 
 /* @var $this \yii\web\View */
 
-use TerabyteSoft\Widgets\Sidebar;
+use TerabyteSoft\Themes\Adminator\Widgets\Sidebar;
 use Yiisoft\Yii\Bootstrap4\Html;
 use Yiisoft\Yii\Bootstrap4\Nav;
 use yii\helpers\Url;
