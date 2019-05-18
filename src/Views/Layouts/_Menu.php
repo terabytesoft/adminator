@@ -1,33 +1,34 @@
 <?php
 
 /**
- * (c) CJT TERABYTE INC
- * For the full copyright and license information, please view the LICENSE.md
- * file that was distributed with this source code.
+ * @link https://github.com/terabytesoft
+ * @copyright Copyright (c) 2018 TerabyteSoft S.A.
+ * @license https://choosealicense.com/licenses/bsd-3-clause/
  *
- *        @link: https://github.com/cjtterabytesoft/adminator
- *      @author: Wilmer Arámbula <terabytefrelance@gmail.com>
- *   @copyright: (c) CJT TERABYTE INC
- *        @view: layout[_menu]
- *       @since: 1.0
- *         @yii: 3.0
+ * @author: Wilmer Arámbula <wilmer.arambula@gmail.com>
+ */
+
+/**
+ * View/Layout: _Menu.php
  **/
 
 /* @var $this \yii\web\View */
 
+use Yiisoft\Yii\Bootstrap4\Html;
 use Yiisoft\Yii\Bootstrap4\Nav;
 use Yiisoft\Yii\Bootstrap4\NavBar;
 
 ?>
 
 <!- MENU - START !->
-<?php $user = $this->app->user->identity;
+
+<?php
 
 NavBar::begin([
 	'brandUrl' => $this->app->homeUrl,
 	'containerOptions' => ['aria-label' => 'Toggle navigation'],
 	'options' => [
-		'class' => 'navbar navbar-expand-lg ' . $this->app->params['adminator.menu.nav.css'],
+		'class' => 'navbar navbar-expand-lg ' . $this->app->params['adminator.menu.nav.custom.css'],
 	],
 	'togglerOptions' => [
 		'class' => [
@@ -38,11 +39,12 @@ NavBar::begin([
 
 echo Nav::widget([
 	'options' => ['class' => 'navbar-nav float-right ml-auto c-white'],
-	'items' => $this->app->params['adminator.menu.nav'],
+	'items' => $this->app->params['adminator.menu.nav.items'],
 	'encodeLabels' => false,
 ]);
 
 NavBar::end();
 
 ?>
+
 <!- MENU - END !->

@@ -30,7 +30,7 @@ $imagesUrl = $this->app->getAlias($imagesUrl->baseUrl);
 
     <?= Html::endTag('div') ?>
 
-    <?= Html::beginTag('div', ['class' => 'col-12 col-md-4 peer pX-40 scrollable pos-r',
+    <?= Html::beginTag('div', ['class' => 'align-self-center col-12 col-md-4 peer pX-40 scrollable pos-r',
         'style' => 'min-width: 320px;']) ?>
 
 		<?= $content ?>
