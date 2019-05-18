@@ -43,7 +43,6 @@ class AdminatorAsset extends AssetBundle
 		\Yiisoft\Yii\JQuery\YiiAsset::class,
 		\TerabyteSoft\Assets\BootBox\BootBoxAsset::class,
 		\TerabyteSoft\Assets\Fontawesome\Dev\Css\NpmAllAsset::class,
-		\TerabyteSoft\Assets\ThemifyIcons\ThemifyIconsAsset::class,
 	];
 
 	public $publishOptions = [

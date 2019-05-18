@@ -16,7 +16,7 @@
 /* @var $content string */
 
 use TerabyteSoft\Themes\Adminator\Assets\Adminator\AdminatorAsset;
-use TerabyteSoft\Themes\Adminator\Assets\Npm\ThemifyIconsAsset;
+use TerabyteSoft\Assets\ThemifyIcons\ThemifyIconsAsset;
 
 use TerabyteSoft\Widgets\Alert;
 use Yiisoft\Yii\Bootstrap4\Html;
