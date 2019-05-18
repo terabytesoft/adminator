@@ -78,6 +78,14 @@ return [
 			'options' => ['class' => 'search-input'],
 		],
 	],
+	'adminator.menu.menuser.nav.items.hidden' => [
+		[
+			'login',
+			'register',
+			'request',
+			'resend',
+		]
+	],
 	//adminator - sidebar - options
 	'adminator.sidebar.menu.items' => [
 		[

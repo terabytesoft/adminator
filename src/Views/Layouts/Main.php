@@ -63,15 +63,31 @@ ThemifyIconsAsset::register($this);
 				<?php else : ?>
 					<!- WRAPPER !->
 					<?= Html::beginTag('wrapper', ['class' => 'd-f flex-column']) ?>
-						<?php if (($this->app->controller->action->id !== 'register') &&
-							($this->app->controller->action->id !== 'login')) : ?>
+						<?php if (!in_array(
+							$this->app->controller->action->id,
+							$this->params['adminator.menu.menuser.nav.items.hidden']
+						)) : ?>
 							<?= $this->render('_menu') ?>
 						<?php endif; ?>
 						<!- SECTION-CONTENT !->
-						<?= Html::beginTag('div', ['class' => (($this->app->controller->action->id == 'register') ||
-							($this->app->controller->action->id == 'login')) ? 'container-fluid flex-fill'
-							: (($this->app->controller->action->id == 'error') ? 'container d-f flex-fill'
-							: 'container flex-fill'), ]) ?>
+						<?= Html::beginTag(
+							'div',
+							[
+								'class' => in_array(
+									$this->app->controller->action->id,
+									$this->params['adminator.menu.menuser.nav.items.hidden']
+								)
+								? 'container-fluid flex-fill'
+								: (in_array(
+									$this->app->controller->action->id,
+									[
+										'error',
+									]
+								)
+								? 'container d-f flex-fill'
+								: 'container flex-fill')
+							]
+						) ?>
 							<!- WIDGET-BREADCRUMBS !->
 							<?= Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ?
 								$this->params['breadcrumbs'] : [], ]) ?>

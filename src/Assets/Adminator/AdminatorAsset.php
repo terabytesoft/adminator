@@ -25,6 +25,8 @@ class AdminatorAsset extends AssetBundle
 		'Css/Adminator.css',
 		'Css/Login.css',
 		'Css/Register.css',
+		'Css/Request.css',
+		'Css/Resend.css',
 		'Css/Site.css',
 	];
 
@@ -47,6 +49,8 @@ class AdminatorAsset extends AssetBundle
 			'Css/Adminator.css',
 			'Css/Login.css',
 			'Css/Register.css',
+			'Css/Request.css',
+			'Css/Resend.css',
 			'Css/Site.css',
 			'Js/Lodash.Custom.min.js',
 			'Js/Adminator.js',
