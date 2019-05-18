@@ -22,9 +22,9 @@ use Yiisoft\Yii\Bootstrap4\Html;
 <?= Html::begintag('div', ['class' => 'sidebar']) ?>
 	<?= Html::begintag('div', ['class' => 'sidebar-inner']) ?>
 		<!- SIDEBAR-HEADER -!>
-		<?= $this->render('_Sidebar-header') ?>
+		<?= $this->render('_Sidebar-Header') ?>
 		<!- SIDEBAR-MENU -!>
-		<?= $this->render('_Sidebar-menu') ?>
+		<?= $this->render('_Sidebar-Menu') ?>
 	<?= Html::endTag('div') ?>
 <?= Html::endTag('div') ?>
 
