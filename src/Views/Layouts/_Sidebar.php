@@ -1,18 +1,16 @@
 <?php
 
 /**
- * (c) CJT TERABYTE INC
- * For the full copyright and license information, please view the LICENSE.md
- * file that was distributed with this source code.
+ * @link https://github.com/terabytesoft
+ * @copyright Copyright (c) 2018 TerabyteSoft S.A.
+ * @license https://choosealicense.com/licenses/bsd-3-clause/
  *
- *        @link: https://github.com/cjtterabytesoft/adminator
- *      @author: Wilmer Arámbula <terabytefrelance@gmail.com>
- *   @copyright: (c) CJT TERABYTE INC
- *        @view: layout[_sidebar]
- *       @since: 1.0
- *         @yii: 3.0
- **/
+ * @author: Wilmer Arámbula <wilmer.arambula@gmail.com>
+ */
 
+/**
+ * View/Layout: _Sidebar.php
+ **/
 /* @var $this \yii\web\View */
 
 use Yiisoft\Yii\Bootstrap4\Html;

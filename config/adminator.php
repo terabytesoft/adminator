@@ -35,19 +35,13 @@ return [
 		[
 			'label' => Html::tag('i', '', ['class' => 'ti-settings mR-10']) .
 				Html::tag('span', 'Settings'),
-			'url' => '\\#',
+			'url' => '/user/settings/account',
 			'linkOptions' => ['class' => 'd-b td-n pY-5 bgcH-grey-100 c-grey-700 fsz-sm'],
 		],
 		[
 			'label' => Html::tag('i', '', ['class' => 'ti-user mR-10']) .
 				Html::tag('span', 'Profile'),
-			'url' => '\\#',
-			'linkOptions' => ['class' => 'd-b td-n pY-5 bgcH-grey-100 c-grey-700 fsz-sm'],
-		],
-		[
-			'label' => Html::tag('i', '', ['class' => 'ti-email mR-10']) .
-				Html::tag('span', 'Messages'),
-			'url' => '\\#',
+			'url' => '/user/settings/profile',
 			'linkOptions' => ['class' => 'd-b td-n pY-5 bgcH-grey-100 c-grey-700 fsz-sm'],
 		],
 		[
@@ -79,12 +73,10 @@ return [
 		],
 	],
 	'adminator.menu.menuser.nav.items.hidden' => [
-		[
-			'login',
-			'register',
-			'request',
-			'resend',
-		]
+		'login',
+		'register',
+		'request',
+		'resend',
 	],
 	//adminator - sidebar - options
 	'adminator.sidebar.menu.items' => [
@@ -105,37 +97,9 @@ return [
 				),
 				['class' => 'icon-holder']
 			),
-			'url' => 'javascript:void(0);',
-			'linkOptions' => ['class' => 'dropdown-toggle'],
-			'options' => ['class' => 'nav-item dropdown'],
-			'items' => [
-				[
-					'label' => Html::tag(
-						'span',
-						Html::encode(
-							Yii::t('Tests', 'Option 1')
-						),
-						['class' => 'title']
-					),
-					'url' => 'javascript:void(0);',
-					'linkOptions' => ['class' => 'sidebar-link'],
-					'options' => ['class' => 'nav-item dropdown'],
-					'items' => [
-						[
-							'label' => Html::tag(
-								'span',
-								Html::encode(
-									Yii::t('Tests', 'Option 2')
-								),
-								['class' => 'title']
-							),
-							'url' => '/site/about',
-							'linkOptions' => ['class' => 'sidebar-link'],
-							'options' => ['class' => 'nav-item dropdown'],
-						],
-					],
-				],
-			],
+			'url' => '/',
+			'linkOptions' => ['class' => 'sidebar-link'],
+			'options' => ['class' => 'nav-item'],
 		],
 		[
 			'label' => Html::tag(

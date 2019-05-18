@@ -1,16 +1,17 @@
 <?php
 
 /**
- * (c) CJT TERABYTE INC
- * For the full copyright and license information, please view the LICENSE.md
- * file that was distributed with this source code.
+ * @link https://github.com/terabytesoft
+ * @copyright Copyright (c) 2018 TerabyteSoft S.A.
+ * @license https://choosealicense.com/licenses/bsd-3-clause/
  *
- *        @link: https://github.com/cjtterabytesoft/adminator
- *      @author: Wilmer Arámbula <terabytefrelance@gmail.com>
- *   @copyright: (c) CJT TERABYTE INC
- *      @assets: [AdminatorAsset]
- *       @since: 1.0
- *         @yii: 3.0
+ * @author: Wilmer Arámbula <wilmer.arambula@gmail.com>
+ */
+
+/**
+ * Class AdminatorAsset.
+ *
+ * Register assset bundle adminator theme
  **/
 
 namespace TerabyteSoft\Themes\Adminator\Assets\Adminator;
@@ -40,7 +41,7 @@ class AdminatorAsset extends AssetBundle
 		\Yiisoft\Yii\Bootstrap4\BootstrapPluginAsset::class,
 		\Yiisoft\Yii\JQuery\JqueryAsset::class,
 		\Yiisoft\Yii\JQuery\YiiAsset::class,
-		\TerabyteSoft\Themes\Adminator\Assets\Bower\BootBoxAsset::class,
+		\TerabyteSoft\Assets\Bootbox\BootboxAsset::class,
 		\TerabyteSoft\Assets\Fontawesome\Dev\Css\NpmAllAsset::class,
 	];
 

@@ -1,5 +1,17 @@
 <?php
 
+/**
+ * @link https://github.com/terabytesoft
+ * @copyright Copyright (c) 2018 TerabyteSoft S.A.
+ * @license https://choosealicense.com/licenses/bsd-3-clause/
+ *
+ * @author: Wilmer Arámbula <wilmer.arambula@gmail.com>
+ */
+
+/**
+ * View/Layout: Main.php
+ **/
+
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -12,6 +24,9 @@ use Yiisoft\Yii\Bootstrap4\Breadcrumbs;
 
 AdminatorAsset::register($this);
 ThemifyIconsAsset::register($this);
+
+$imagesUrl = TerabyteSoft\Themes\Adminator\Assets\Images\ImagesAsset::register($this);
+$this->params['baseUrl'] = $this->app->getAlias($imagesUrl->baseUrl);
 
 ?>
 
@@ -65,7 +80,7 @@ ThemifyIconsAsset::register($this);
 					<?= Html::beginTag('wrapper', ['class' => 'd-f flex-column']) ?>
 						<?php if (!in_array(
 							$this->app->controller->action->id,
-							$this->params['adminator.menu.menuser.nav.items.hidden']
+							$this->app->params['adminator.menu.menuser.nav.items.hidden']
 						)) : ?>
 							<?= $this->render('_menu') ?>
 						<?php endif; ?>
@@ -75,7 +90,7 @@ ThemifyIconsAsset::register($this);
 							[
 								'class' => in_array(
 									$this->app->controller->action->id,
-									$this->params['adminator.menu.menuser.nav.items.hidden']
+									$this->app->params['adminator.menu.menuser.nav.items.hidden']
 								)
 								? 'container-fluid flex-fill'
 								: (in_array(

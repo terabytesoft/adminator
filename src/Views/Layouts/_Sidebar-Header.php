@@ -1,16 +1,15 @@
 <?php
 
 /**
- * (c) CJT TERABYTE INC
- * For the full copyright and license information, please view the LICENSE.md
- * file that was distributed with this source code.
+ * @link https://github.com/terabytesoft
+ * @copyright Copyright (c) 2018 TerabyteSoft S.A.
+ * @license https://choosealicense.com/licenses/bsd-3-clause/
  *
- *        @link: https://github.com/cjtterabytesoft/adminator
- *      @author: Wilmer Arámbula <terabytefrelance@gmail.com>
- *   @copyright: (c) CJT TERABYTE INC
- *        @view: layout[_sidebar-header]
- *       @since: 1.0
- *         @yii: 3.0
+ * @author: Wilmer Arámbula <wilmer.arambula@gmail.com>
+ */
+
+/**
+ * View/Layout: _Sidebar-Header.php
  **/
 
 /* @var $this \yii\web\View */
@@ -28,7 +27,7 @@ use Yiisoft\Yii\Bootstrap4\Html;
 				<?= Html::begintag('div', ['class' => 'peers ai-c fxw-nw']) ?>
 					<?= Html::begintag('div', ['class' => 'peer']) ?>
 						<?= Html::begintag('div', ['class' => 'logo']) ?>
-							<?= Html::img('/images/logos/logo.png', $options = ['alt' => '']) ?>
+							<?= Html::img($this->params['baseUrl'] . '/Logos/Logo.png', $options = ['alt' => '']) ?>
 						<?= Html::endTag('div') ?>
 					<?= Html::endTag('div') ?>
 					<?= Html::begintag('div', ['class' => 'peer peer-greed']) ?>

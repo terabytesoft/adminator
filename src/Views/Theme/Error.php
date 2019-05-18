@@ -1,22 +1,15 @@
 <?php
 
 /**
- * @link http://www.yiiframework.com/
- * @copyright Copyright (c) 2008 Yii Software LLC
- * @license http://www.yiiframework.com/license/
- **/
+ * @link https://github.com/terabytesoft
+ * @copyright Copyright (c) 2018 TerabyteSoft S.A.
+ * @license https://choosealicense.com/licenses/bsd-3-clause/
+ *
+ * @author: Wilmer Arámbula <wilmer.arambula@gmail.com>
+ */
 
 /**
- * (c) CJT TERABYTE INC
- * For the full copyright and license information, please view the LICENSE.md
- * file that was distributed with this source code.
- *
- *        @link: https://github.com/cjtterabytesoft/adminator
- *      @author: Wilmer Arámbula <terabytefrelance@gmail.com>
- *   @copyright: (c) CJT TERABYTE INC
- *        @view: site[error]
- *       @since: 1.0
- *         @yii: 3.0
+ * View/Theme: Error.php
  **/
 
 /* @var $this yii\web\View */
