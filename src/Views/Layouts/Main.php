@@ -56,10 +56,10 @@ $this->params['baseUrl'] = $this->app->getAlias($imagesUrl->baseUrl);
 				<?= Html::endTag('div') ?>
 				<?php if (!$this->app->user->isGuest) : ?>
 					<?= Html::beginTag('div') ?>
-						<?= $this->render('_sidebar') ?>
+						<?= $this->render('_Sidebar') ?>
 						<!- PAGE-CONTAINER -!>
 						<?= Html::beginTag('div', ['class' => 'page-container']) ?>
-							<?= $this->render('_menuser') ?>
+							<?= $this->render('_Menuser') ?>
 							<!- MAIN -!>
 							<?= Html::beginTag('main', ['class' => 'main-content bgc-grey-100']) ?>
 								<!- WIDGET-BREADCRUMBS !->
@@ -71,7 +71,7 @@ $this->params['baseUrl'] = $this->app->getAlias($imagesUrl->baseUrl);
 								<?= Alert::widget()?>
 							<?= Html::endTag('main') ?>
 							<!- END - MAIN -!>
-							<?= $this->render('_footer') ?>
+							<?= $this->render('_Footer') ?>
 						<?= Html::endTag('div') ?>
 						<!- END - PAGE-CONTAINER -!>
 					<?= Html::endTag('div') ?>
@@ -82,7 +82,7 @@ $this->params['baseUrl'] = $this->app->getAlias($imagesUrl->baseUrl);
 							$this->app->controller->action->id,
 							$this->app->params['adminator.menu.menuser.nav.items.hidden']
 						)) : ?>
-							<?= $this->render('_menu') ?>
+							<?= $this->render('_Menu') ?>
 						<?php endif; ?>
 						<!- SECTION-CONTENT !->
 						<?= Html::beginTag(
@@ -112,7 +112,7 @@ $this->params['baseUrl'] = $this->app->getAlias($imagesUrl->baseUrl);
 							<?= Alert::widget()?>
 						<?= Html::endTag('div') ?>
 						<!- END - SECTION-CONTENT !->
-						<?= $this->render('_footer') ?>
+						<?= $this->render('_Footer') ?>
 					<?= Html::endTag('wrapper') ?>
 					<!- END - WRAPPER !->
 				<?php endif; ?>
